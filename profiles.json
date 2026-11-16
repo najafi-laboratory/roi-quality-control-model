@@ -1,0 +1,32 @@
+{
+  "purkinje": {
+    "weights": "weights/purkinje_all.pt",
+    "config": {
+      "use_image": true,
+      "use_signal": true,
+      "use_metrics": true
+    },
+    "target_structure": "dendrite",
+    "good_threshold": 0.85,
+    "bad_threshold": 0.15,
+    "patch_size": 64,
+    "trace_length": 2048,
+    "num_metrics": 24,
+    "preprocessing": "legacy_v1_zscore_patch_div255_robust_signal"
+  },
+  "ppc_vis": {
+    "weights": "weights/ppc_vis_signal_metrics.pt",
+    "config": {
+      "use_image": false,
+      "use_signal": true,
+      "use_metrics": true
+    },
+    "target_structure": "soma",
+    "good_threshold": 0.85,
+    "bad_threshold": 0.15,
+    "patch_size": 64,
+    "trace_length": 2048,
+    "num_metrics": 24,
+    "preprocessing": "legacy_v1_zscore_patch_div255_robust_signal"
+  }
+}
